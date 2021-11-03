@@ -4,7 +4,7 @@ import Footer from "./Footer";
 import DetailsProducts from "../pages/DetailsProducts";
 import Home from "../pages/Home";
 import ListProducts from "../pages/ListProducts";
-import "../styles/App.scss";
+import "../styles/app.scss";
 
 function App() {
   return (
