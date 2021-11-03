@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import {
   BrowserRouter as Router,
   Switch,
@@ -6,14 +5,15 @@ import {
 } from "react-router-dom";
 import Header from './Header';
 import Footer from './Footer';
-import Details from '../pages/Details';
+import DetailsProducts from '../pages/DetailsProducts';
 import Home from '../pages/Home';
+import ListProducts from '../pages/ListProducts';
 import './styles/App.scss';
 
 function App() {
 
-  return ( <
-    Router >
+  return (
+    <Router >
     <
     div className = "app-wrapper" >
     <
@@ -36,11 +36,10 @@ function App() {
     ListProducts / >
     <
     /Route> <
-    /Switch> <
-    Footer / >
-    <
-    /div> <
-    /Router>
+    /Switch>
+    <Footer / >
+    </div>
+    </Router>
   );
 }
 
