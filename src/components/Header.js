@@ -1,22 +1,8 @@
 import "../styles/header.scss";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
-import axios from "axios";
 import Logo from "./Logo";
 
 const Header = () => {
-  const [api, setApi] = useState([]);
-  useEffect(() => {
-    const getProduct = async () => {
-      await axios
-        .get("http://d7a7-31-32-43-35.ngrok.io/products")
-        .then(function (response) {
-          console.log(response.data);
-          setApi(response.data);
-        });
-    };
-    getProduct();
-  }, []);
   return (
     <header className="app-header">
       <div className="app-header-row">
