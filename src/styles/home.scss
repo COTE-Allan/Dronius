@@ -8,9 +8,6 @@ html {
 .app-home {
   font-family: "Montserrat", sans-serif;
 
-  & img {
-    width: 20px;
-  }
   &-main {
     display: flex;
     align-items: center;
@@ -20,56 +17,72 @@ html {
     text-align: center;
     background-image: url("../assets/bg.png");
     background-size: cover;
+
     @include for-tablet-portrait-up {
       padding: 50px;
     }
+
     & h1 {
       font-size: 40px;
       font-weight: 500;
+
       @include for-tablet-portrait-up {
         font-size: 55px;
       }
+
       @include for-desktop-up {
         font-size: 70px;
         width: 65%;
       }
     }
+
     & img {
       width: 200px;
       animation: hover-vertical 2000ms ease-in-out infinite;
+
       @include for-tablet-portrait-up {
         width: 300px;
       }
+
       @include for-desktop-up {
         width: 400px;
       }
     }
   }
+
   &-about {
     background-color: #026ad4;
     color: white;
     padding: 15px;
+
     @include for-tablet-portrait-up {
       padding: 20px;
     }
+
     @include for-tablet-landscape-up {
       padding: 30px;
     }
+
     & img {
       @include for-tablet-portrait-up {
         width: 50%;
       }
+
       @include for-tablet-landscape-up {
         width: 30%;
       }
+
       width: 90%;
     }
+
     & h2 {
       font-size: 25px;
+
       @include for-tablet-portrait-up {
         font-size: 30px;
       }
     }
+
     &-section {
       margin-bottom: 30px;
       display: flex;
@@ -77,36 +90,44 @@ html {
       text-align: center;
       justify-content: center;
       flex-direction: column;
+
       @include for-tablet-landscape-up {
         flex-direction: row;
       }
+
       @include for-desktop-up {
         text-align: left;
+
         &.reverse {
           text-align: right;
         }
       }
+
       &.reverse {
         @include for-tablet-landscape-up {
           flex-direction: row-reverse;
         }
       }
     }
+
     &-text {
       margin: 20px 30px 0px 30px;
       line-height: 30px;
       display: flex;
       flex-direction: column;
       width: 90%;
+
       @include for-tablet-portrait-up {
         width: 60%;
         margin: 10px 30px 0px 30px;
       }
+
       @include for-tablet-landscape-up {
         width: 30%;
       }
     }
   }
+
   &-articles {
     height: 100vh;
     background-image: url("../assets/bg.png");
@@ -118,9 +139,11 @@ html {
   0% {
     transform: translateY(10px);
   }
+
   50% {
     transform: translateY(-10px);
   }
+
   100% {
     transform: translateY(10px);
   }

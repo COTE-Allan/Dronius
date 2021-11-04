@@ -7,6 +7,7 @@
 
 svg {
   width: 10em;
+
   @include for-tablet-portrait-up {
     width: 15em;
   }
@@ -22,6 +23,7 @@ svg {
   letter-spacing: -0.08em;
   fill: #fff;
 }
+
 .cls-2 {
   fill: none;
   stroke: #fff;
@@ -41,6 +43,7 @@ svg {
   top: 0;
   position: sticky;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 6px;
+
   &-row {
     display: flex;
     align-items: center;
@@ -48,35 +51,42 @@ svg {
     margin-bottom: 5px;
     width: 100%;
   }
+
   &-logo {
     display: flex;
     justify-content: flex-start;
     flex-grow: 1;
+
     @include for-tablet-portrait-up {
       transform: translateX(25px);
       justify-content: center;
     }
   }
+
   &-cart {
     font-size: 5px;
 
     & button {
       font-size: 35px;
     }
+
     @include for-tablet-portrait-up {
       right: 30px;
       top: 5px;
+
       & button {
         font-size: 50px;
       }
     }
   }
+
   & nav a {
     color: #fff;
     margin: 0 10px 0 10px;
     font-size: 14px;
     text-align: center;
     width: 100px;
+
     @include for-tablet-portrait-up {
       font-size: 30px;
       width: 200px;
@@ -91,9 +101,11 @@ svg {
   font-size: 50px;
   padding: 0;
   border: none;
+
   &:hover {
     animation: jello-horizontal 0.9s both;
   }
+
   .snipcart-items-count {
     font-size: 30px;
   }
@@ -116,56 +128,69 @@ svg {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
+
   30% {
     -webkit-transform: scale3d(1.25, 0.75, 1);
     transform: scale3d(1.25, 0.75, 1);
   }
+
   40% {
     -webkit-transform: scale3d(0.75, 1.25, 1);
     transform: scale3d(0.75, 1.25, 1);
   }
+
   50% {
     -webkit-transform: scale3d(1.15, 0.85, 1);
     transform: scale3d(1.15, 0.85, 1);
   }
+
   65% {
     -webkit-transform: scale3d(0.95, 1.05, 1);
     transform: scale3d(0.95, 1.05, 1);
   }
+
   75% {
     -webkit-transform: scale3d(1.05, 0.95, 1);
     transform: scale3d(1.05, 0.95, 1);
   }
+
   100% {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
 }
+
 @keyframes jello-horizontal {
   0% {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
+
   30% {
     -webkit-transform: scale3d(1.25, 0.75, 1);
     transform: scale3d(1.25, 0.75, 1);
   }
+
   40% {
     -webkit-transform: scale3d(0.75, 1.25, 1);
     transform: scale3d(0.75, 1.25, 1);
   }
+
   50% {
     -webkit-transform: scale3d(1.15, 0.85, 1);
     transform: scale3d(1.15, 0.85, 1);
   }
+
   65% {
     -webkit-transform: scale3d(0.95, 1.05, 1);
     transform: scale3d(0.95, 1.05, 1);
   }
+
   75% {
     -webkit-transform: scale3d(1.05, 0.95, 1);
     transform: scale3d(1.05, 0.95, 1);
   }
+
   100% {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
