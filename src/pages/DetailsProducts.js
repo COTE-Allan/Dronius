@@ -32,7 +32,7 @@ const DetailsProducts = () => {
                             <Link to="/">Accueil</Link>
                         </li>
                         <li class="breadcrumb-item">
-                            <Link to={"/ListProducts/" + items.category}>
+                            <Link to={"/category/" + items.category}>
                                 {items.category}
                             </Link>
                         </li>
