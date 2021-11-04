@@ -3,7 +3,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import DetailsProducts from "../pages/DetailsProducts";
 import Home from "../pages/Home";
-import ListProducts from "../pages/ListProducts";
+import ProductAll from "../pages/ProductAll";
 import "../styles/app.scss";
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
             <Home />
           </Route>{" "}
           <Route path="/ListProducts/:category">
-            <ListProducts />
+            <ProductAll />
           </Route>{" "}
         </Switch>
         <Footer />
