@@ -1,10 +1,10 @@
 
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../styles/productAll.scss';
-import ListProducts from ' ../components/ProductList'
+import '../styles/listproducts.scss';
+import ProductList from ' ../components/ProductList'
 
-const ProductAll = () => {
+const ListProducts = () => {
     const [product, setProduct] = useState([]);
     useEffect(
         () => {
@@ -16,10 +16,10 @@ const ProductAll = () => {
         }, [])
     return (
         <>
-            <ListProducts product={product} />
+            <ProductList product={product} />
         </>
     );
 }
 
-export default ProductAll;
+export default ListProducts;
 
