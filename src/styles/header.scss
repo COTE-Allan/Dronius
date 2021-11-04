@@ -8,7 +8,7 @@ svg {
   }
 
   &:hover {
-    animation: jello-horizontal 0.9s both;
+    animation: jello-horizontal 1s both ease-in-out;
   }
 }
 
