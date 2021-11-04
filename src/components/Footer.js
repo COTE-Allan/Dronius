@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="app-footer">
       <div className="app-footer-column">
         <p className="copyright">© Copyright Dronius 2021 ©</p>
-        <Link to="/legals">Legals</Link>
+        <Link to="/legals">Mentions Légales</Link>
         <Link to="/CGU">CGU et CGV</Link>
         <a>RGPD</a>
         {/* 

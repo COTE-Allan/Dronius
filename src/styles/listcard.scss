@@ -2,17 +2,27 @@
 
 .app-listcard {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column-reverse;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  max-width: 40%;
+  max-width: 90%;
+  @include for-tablet-landscape-up {
+    max-width: 50%;
+    flex-direction: row-reverse;
+  }
+  & a {
+    color: black;
+  }
   & img {
     width: 150px;
     height: 150px;
   }
   &-title {
-    font-size: 25px;
+    @include for-tablet-landscape-up {
+      font-size: 25px;
+    }
+    font-size: 20px;
   }
   &-div {
     display: flex;
@@ -20,12 +30,16 @@
     justify-content: space-between;
   }
   &-desc {
-    max-width: 85%;
+    @include for-tablet-landscape-up {
+      max-width: 85%;
+    }
+    max-width: 75%;
     max-height: 70px;
     text-overflow: ellipsis;
     overflow: hidden;
     margin-bottom: 0;
     text-align: justify;
+    color: rgb(75, 75, 75);
   }
   &-price {
     margin-top: 0;

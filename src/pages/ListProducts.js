@@ -27,7 +27,7 @@ const ListProducts = () => {
   }
   return (
     <div className="app-listproducts">
-      <p>Liste des produits</p>
+      <h1 className="app-listproducts-title">Nos {category}</h1>
       {productsList.map((product) => (
         <ListCard
           img={"http://40e1-31-32-43-35.ngrok.io" + product.images[0].url}
