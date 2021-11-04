@@ -5,6 +5,8 @@ import DetailsProducts from "../pages/DetailsProducts";
 import Home from "../pages/Home";
 import ListProducts from "../pages/ListProducts";
 import "../styles/app.scss";
+import Legals from "../pages/Legals";
+import Conditions from "../pages/Conditions";
 
 function App() {
   return (
@@ -14,13 +16,19 @@ function App() {
         <Switch>
           <Route path="/details/:id">
             <DetailsProducts />
-          </Route>{" "}
+          </Route>
+          <Route path="/listproducts/:category">
+            <ListProducts />
+          </Route>
+          <Route path="/CGU">
+            <Conditions />
+          </Route>
+          <Route path="/legals">
+            <Legals />
+          </Route>
           <Route path="/">
             <Home />
-          </Route>{" "}
-          <Route path="/ListProducts/:category">
-            <ListProducts />
-          </Route>{" "}
+          </Route>
         </Switch>
         <Footer />
       </div>

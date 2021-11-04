@@ -2,12 +2,22 @@ import "../styles/home.scss";
 import drone from "../assets/drone.svg";
 import about_1 from "../assets/illustration-etudiants.jpg";
 import about_2 from "../assets/illustration-controle-qualite.jpg";
+import LargeButtonAnchor from "../components/LargeButtonAnchor";
+import { useEffect } from "react";
 
 const Home = () => {
+  useEffect(() => {
+    let desc = "Bienvenue sur Dronius ! Prenez votre envol avec qualité.";
+    document.title = "Dronius - Accueil";
+    document
+      .querySelector('meta[name="description"]')
+      .setAttribute("content", desc);
+  }, []);
   return (
     <div className="app-home">
       <div className="app-home-main">
         <h1>Prenez votre envol avec qualité grâce a Dronius</h1>
+        <LargeButtonAnchor link="#articles" text="Découvrir la marque" />
         <img src={drone}></img>
       </div>
       <div className="app-home-about">
@@ -36,7 +46,9 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="app-home-articles"></div>
+      <div className="app-home-articles">
+        <a id="articles"></a>
+      </div>
     </div>
   );
 };
