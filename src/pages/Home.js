@@ -1,5 +1,6 @@
 import "../styles/home.scss";
 import drone from "../assets/drone.svg";
+import backgroundVideo from "../assets/Background.mp4";
 import about_1 from "../assets/illustration-etudiants.jpg";
 import about_2 from "../assets/illustration-controle-qualite.jpg";
 import LargeButtonAnchor from "../components/LargeButtonAnchor";
@@ -17,6 +18,13 @@ const Home = () => {
     <div className="app-home">
       <div className="app-home-main">
         <h1>Prenez votre envol avec qualité grâce a Dronius</h1>
+
+        <div className="video-container">
+            <video playsInline autoPlay loop muted className="background-video">
+                <source src={backgroundVideo} type="video/mp4"></source>
+            </video>
+        </div>
+
         <LargeButtonAnchor link="#articles" text="Découvrir la marque" />
         <img src={drone}></img>
       </div>
