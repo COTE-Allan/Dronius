@@ -5,6 +5,10 @@ import DetailsProducts from "../pages/DetailsProducts";
 import Home from "../pages/Home";
 import ListProducts from "../pages/ListProducts";
 import "../styles/app.scss";
+import Legals from "../pages/Legals";
+import Conditions from "../pages/Conditions";
+import RGPD from "../pages/RGPD";
+
 
 function App() {
   return (
@@ -13,14 +17,23 @@ function App() {
         <Header />
         <Switch>
           <Route path="/details/:id">
-            <DetailsProducts/>
-          </Route>{" "}
+            <DetailsProducts />
+          </Route>
+          <Route path="/category/:category">
+            <ListProducts />
+          </Route>
+          <Route path="/CGU">
+            <Conditions />
+          </Route>
+          <Route path="/legals">
+            <Legals />
+          </Route>
+          <Route path="/RGPD">
+            <RGPD />
+          </Route>
           <Route path="/">
             <Home />
-          </Route>{" "}
-          <Route path="/ListProducts/:category">
-            <ListProducts />
-          </Route>{" "}
+          </Route>
         </Switch>
         <Footer />
       </div>

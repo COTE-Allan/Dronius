@@ -1,0 +1,58 @@
+@import "breakpoint.scss";
+
+.app-listcard {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  max-width: 90%;
+
+  @include for-tablet-landscape-up {
+    max-width: 50%;
+    flex-direction: row-reverse;
+  }
+
+  & a {
+    color: black;
+  }
+
+  & img {
+    width: 150px;
+    height: 150px;
+  }
+
+  &-title {
+    @include for-tablet-landscape-up {
+      font-size: 25px;
+    }
+
+    font-size: 20px;
+  }
+
+  &-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-desc {
+    @include for-tablet-landscape-up {
+      max-width: 85%;
+    }
+
+    max-width: 75%;
+    max-height: 70px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 0;
+    text-align: justify;
+    color: rgb(75, 75, 75);
+  }
+
+  &-price {
+    margin-top: 0;
+    font-size: 30px;
+    font-weight: 600;
+  }
+}
