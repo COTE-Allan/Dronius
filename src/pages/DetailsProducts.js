@@ -11,7 +11,7 @@ const DetailsProducts = () => {
     useEffect(() => {
         const getProduct = async () => {
             await axios
-                .get("http://40e1-31-32-43-35.ngrok.io/products/" + id)
+                .get("https://dronius-api.herokuapp.com/products/" + id)
                 .then(function (response) {
                     //console.log(response.data);
                     setItems(response.data);
@@ -59,7 +59,7 @@ const DetailsProducts = () => {
                                         <img
                                             class="d-block w-100"
                                             src={
-                                                "http://40e1-31-32-43-35.ngrok.io" +
+                                                "https://dronius-api.herokuapp.com" +
                                                 items.images[0].url
                                             }
                                         />
@@ -68,7 +68,7 @@ const DetailsProducts = () => {
                                         <img
                                             class="d-block w-100"
                                             src={
-                                                "http://40e1-31-32-43-35.ngrok.io" +
+                                                "https://dronius-api.herokuapp.com" +
                                                 items.images[1].url
                                             }
                                         />
@@ -77,7 +77,7 @@ const DetailsProducts = () => {
                                         <img
                                             class="d-block w-100"
                                             src={
-                                                "http://40e1-31-32-43-35.ngrok.io" +
+                                                "https://dronius-api.herokuapp.com" +
                                                 items.images[2].url
                                             }
                                         />
@@ -133,7 +133,7 @@ const DetailsProducts = () => {
                                         items.description
                                     }
                                     data-item-image={
-                                        "http://40e1-31-32-43-35.ngrok.io" +
+                                        "https://dronius-api.herokuapp.com" +
                                         items.images[0].url
                                     }
                                     data-item-name={items.name}

@@ -17,7 +17,7 @@ const Home = () => {
     }, []);
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        axios.get("http://40e1-31-32-43-35.ngrok.io/products").then((res) => {
+        axios.get("https://dronius-api.herokuapp.com/products").then((res) => {
             setProducts(res.data.slice(0, 3));
         });
     }, []);

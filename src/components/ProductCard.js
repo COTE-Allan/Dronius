@@ -16,7 +16,7 @@ const ProductCard = (props) => {
                         </a>
                         <img
                             src={
-                                "http://40e1-31-32-43-35.ngrok.io" +
+                                "https://dronius-api.herokuapp.com" +
                                 props.product.images[0].url
                             }
                             class="card-img-top"

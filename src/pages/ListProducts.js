@@ -11,7 +11,7 @@ const ListProducts = () => {
   useEffect(() => {
     const getProduct = async () => {
       await axios
-        .get("http://40e1-31-32-43-35.ngrok.io/products")
+        .get("https://dronius-api.herokuapp.com/products")
         .then(function (response) {
           //   console.log(response.data);
           setProducts(response.data);
@@ -30,7 +30,7 @@ const ListProducts = () => {
       <h1 className="app-listproducts-title">Nos {category}</h1>
       {productsList.map((product) => (
         <ListCard
-          img={"http://40e1-31-32-43-35.ngrok.io" + product.images[0].url}
+          img={"https://dronius-api.herokuapp.com" + product.images[0].url}
           price={product.price}
           desc={product.description}
           name={product.name}
