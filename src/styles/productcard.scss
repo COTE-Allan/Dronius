@@ -1,0 +1,22 @@
+.ProductCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a {
+    color: black;
+  }
+  img {
+    width: 100%;
+  }
+  .card {
+    border: none;
+  }
+  .price {
+    font-size: 20px;
+  }
+  .card-title {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}

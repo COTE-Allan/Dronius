@@ -7,6 +7,7 @@ import ListProducts from "../pages/ListProducts";
 import "../styles/app.scss";
 import Legals from "../pages/Legals";
 import Conditions from "../pages/Conditions";
+import RGPD from "../pages/RGPD";
 
 function App() {
   return (
@@ -17,11 +18,14 @@ function App() {
           <Route path="/details/:id">
             <DetailsProducts />
           </Route>
-          <Route path="/listproducts/:category">
+          <Route path="/category/:category">
             <ListProducts />
           </Route>
           <Route path="/CGU">
             <Conditions />
+          </Route>
+          <Route path="/RGPD">
+            <RGPD />
           </Route>
           <Route path="/legals">
             <Legals />

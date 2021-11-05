@@ -15,9 +15,9 @@ const Header = () => {
         </div>
       </div>
       <nav className="app-header-row">
-        <Link to="/ListProducts/Drone">Drones</Link>
-        <Link to="/ListProducts/Cameras">Caméras</Link>
-        <Link to="/ListProducts/Accessoires">Accessoires</Link>
+        <Link to="/category/drones">Drones</Link>
+        <Link to="/category/cameras">Caméras</Link>
+        <Link to="/category/accessoires">Accessoires</Link>
       </nav>
     </header>
   );

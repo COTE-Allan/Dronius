@@ -2,7 +2,7 @@ import "../styles/buttoncard.scss";
 const ButtonCard = (props) => {
   return (
     <button
-      class="snipcart-add-item"
+      class="snipcart-add-item button-round"
       data-item-id={props.id}
       data-item-price={props.price}
       data-item-description={props.desc}

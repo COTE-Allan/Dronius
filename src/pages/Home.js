@@ -1,22 +1,35 @@
 import "../styles/home.scss";
 import drone from "../assets/drone.svg";
+import backgroundVideo from "../assets/Background.mp4";
 import about_1 from "../assets/illustration-etudiants.jpg";
 import about_2 from "../assets/illustration-controle-qualite.jpg";
 import LargeButtonAnchor from "../components/LargeButtonAnchor";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import ProductCard from "../components/ProductCard";
+import axios from "axios";
 
 const Home = () => {
+  const [products, setProducts] = useState([]);
+
   useEffect(() => {
     let desc = "Bienvenue sur Dronius ! Prenez votre envol avec qualité.";
     document.title = "Dronius - Accueil";
     document
       .querySelector('meta[name="description"]')
       .setAttribute("content", desc);
+    axios.get("https://dronius-api.herokuapp.com/products").then((res) => {
+      setProducts(res.data.slice(0, 3));
+    });
   }, []);
   return (
     <div className="app-home">
       <div className="app-home-main">
         <h1>Prenez votre envol avec qualité grâce a Dronius</h1>
+        <div className="video-container">
+          <video playsInline autoPlay loop muted className="background-video">
+            <source src={backgroundVideo} type="video/mp4"></source>
+          </video>
+        </div>
         <LargeButtonAnchor link="#articles" text="Découvrir la marque" />
         <img src={drone}></img>
       </div>
@@ -46,8 +59,12 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="app-home-articles">
-        <a id="articles"></a>
+      <div className="app-home-products container" id="articles">
+        <div className="CardList row">
+          {products.map((product) => (
+            <ProductCard product={product} key={product.id} />
+          ))}
+        </div>
       </div>
     </div>
   );

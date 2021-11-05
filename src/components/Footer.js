@@ -8,10 +8,7 @@ const Footer = () => {
         <p className="copyright">© Copyright Dronius 2021 ©</p>
         <Link to="/legals">Mentions Légales</Link>
         <Link to="/CGU">CGU et CGV</Link>
-        <a>RGPD</a>
-        {/* 
-        <Link to="/CGU"></Link>
-        <Link to="/RGPD"></Link> */}
+        <Link to="/RGPD">RGPD</Link>
       </div>
       <div className="app-footer-column">
         <p>Retrouvez nous sur nos Réseaux Sociaux :</p>
